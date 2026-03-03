@@ -56,7 +56,7 @@ const objectInfo = {
 
   "Porfolio": {
     html: `
-      <h1>Mi Portfolio</h1>
+      <h1>Mi Portfolio AAAAAAA</h1>
       <p>Este es mi curriculum personal.</p>
       <p>Si quieres ver más información, puedes contactarme a traves de mis redes sociales.</p>
     `
