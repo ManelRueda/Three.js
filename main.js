@@ -8,7 +8,7 @@ scene.background = new THREE.Color(0x636768);
 
 // --------------------------- CÁMARA ---------------------------
 const camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 100);
-camera.position.set(0, 2, 6);
+camera.position.set(0, 3, 6);
 const initialCameraPosition = camera.position.clone();
 const initialCameraTarget = new THREE.Vector3(0, 0, 0);
 
@@ -40,8 +40,8 @@ controls.enableDamping = true;
 controls.target.copy(initialCameraTarget);
 
 // --------------------------- OBJETOS ---------------------------
-const cameraObjects = ["Radio","Porfolio","Muñeco_de_nieve"];
-const clickableObjects = ["Radio", "Play", "Pause","Porfolio","Muñeco_de_nieve"];
+const cameraObjects = ["Radio","Porfolio","Muñeco_de_nieve","Revolver", "Pokemon", "Namek", "Sanitario"];
+const clickableObjects = ["Radio", "Play", "Pause","Porfolio","Muñeco_de_nieve","Revolver","Pokemon","Namek","Sanitario"];
 const spotLights = {};
 
 // 🔥 INFORMACIÓN PERSONALIZADA CON HTML
@@ -56,9 +56,9 @@ const objectInfo = {
 
   "Porfolio": {
     html: `
-      <h1>Mi Portfolio AAAAAAAA</h1>
+      <h1>Mi Portfolio</h1>
       <p>Este es mi curriculum personal.</p>
-      <p>Si quieres ver más información, puedes contactarme a traves de mis redes sociales.</p>
+      <p>Si quieres ver más información, puedes contactarme a través de mis redes sociales.</p>
     `
   },
 
@@ -67,6 +67,38 @@ const objectInfo = {
       <h1>Muñeco de Nieve</h1>
       <p>Una figura decorativa situada en el museo.</p>
       <p>¿Por qué está aquí dentro?</p>
+    `
+  },
+
+  "Revolver": {
+    html: `
+      <h1>Revolver</h1>
+      <p>Un objeto histórico expuesto en el museo.</p>
+      <p>Representa la evolución de la tecnología mecánica.</p>
+    `
+  },
+
+  "Pokemon": {
+    html: `
+      <h1>Figura Pokémon</h1>
+      <p>Una figura coleccionable inspirada en el universo Pokémon.</p>
+      <p>Un pequeño guiño a la cultura pop dentro del museo.</p>
+    `
+  },
+
+  "Namek": {
+    html: `
+      <h1>Planeta Namek</h1>
+      <p>Una referencia al famoso planeta del universo Dragon Ball.</p>
+      <p>Un elemento decorativo para fans del anime.</p>
+    `
+  },
+
+  "Sanitario": {
+    html: `
+      <h1>Sanitario</h1>
+      <p>Personaje que se usa para el proyecto EspVRna.</p>
+      <p>Uno de los muchos modelos que he estado haciendo para el proyecto.</p>
     `
   }
 
@@ -153,7 +185,7 @@ overlay.style.zIndex = 100;
 document.body.appendChild(overlay);
 
 const portfolioImage = document.createElement('img');
-portfolioImage.src = 'models/Willy.jpg';
+portfolioImage.src = 'models/Manel Rueda.jpg';
 portfolioImage.style.maxWidth = '50%';
 portfolioImage.style.maxHeight = '50%';
 portfolioImage.style.border = '2px solid white';
